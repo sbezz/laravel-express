@@ -14,10 +14,28 @@ class TestController extends Controller
         //
         //Criando a váriavel $nome
        // $nome = "Sergio";
-        return "Olá $nome";
 
+        //return "Olá $nome";
+
+        return view('test.index', ['nome' => $nome]);
 
     }
+
+    public function notas(){
+
+        $notas = [
+            0 => 'Anotação 01',
+            1 => 'Anotação 02',
+            2 => 'Anotação 03',
+            3 => 'Anotação 04',
+            4 => 'Anotação 05'
+
+        ];
+
+        return view('test.notas', compact('notas'));
+
+    }
+
 
     public function create()
     {
