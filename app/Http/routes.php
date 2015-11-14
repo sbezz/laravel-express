@@ -11,6 +11,16 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
+});
+*/
+
+Route::get('ola/{nome}', 'TestController@index');
+
+Route::get('test', function(){
+
+     return "Olá mundo";
+
 });
